@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz JS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 flex flex-col justify-center items-center">
+    <!-- START MODAL -->
+    <div class="modal flex flex-col min-w-[40%] justify-center items-center bg-slate-100 rounded p-8">
+      <h2 class="text-rose-900 text-2xl font-semibold mb-8">Bem vindo ao Quiz JS</h2>
+      <form class=" start w-full flex flex-col">
+        <div class="flex flex-col gap-1">
+          <label 
+            for="usernamne" 
+            class="text-rose-700 text-sm font-semibold">
+            Digite seu nome:
+          </label>
+          <input 
+            type="text" 
+            name="username" 
+            id="username"
+            placeholder="seu-nome"
+            autofocus
+            class="text-rose-700 py-2 px-3 rounded outline-none focus:ring-1 focus:ring-rose-500"
+            > 
+            <p class="helper text-sm text-rose-700"></p>
+        </div>
+        <button type="submit" class="bg-rose-600 text-white text-sm font-semibold p-3 rounded hover:bg-rose-500 duration-300 mt-4">Iniciar o quiz</button>
+      </form>
+    </div>
+    <!-- QUIZ FORM -->
+    <div class="quiz flex bg-slate-100 min-w-[50%] max-h-[80%] rounded shadow-lg hidden">
+      <h1 class="mx-auto text-4xl font-sans my-10 text-rose-800 font-bold tracking-wide">Quiz JS</h1>
+      <div class="question">
+        <h2 class="title"></h2>
+        
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
