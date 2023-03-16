@@ -10,7 +10,7 @@
 <body>
   <div class="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 flex flex-col justify-center items-center">
     <!-- START MODAL -->
-    <div class="modal flex flex-col min-w-[40%] justify-center items-center bg-slate-100 rounded p-8">
+    <div class="hidden modal flex flex-col min-w-[40%] justify-center items-center bg-slate-100 rounded p-8">
       <h2 class="text-rose-900 text-2xl font-semibold mb-8">Bem vindo ao Quiz JS</h2>
       <form class=" start w-full flex flex-col">
         <div class="flex flex-col gap-1">
@@ -33,12 +33,34 @@
       </form>
     </div>
     <!-- QUIZ FORM -->
-    <div class="quiz flex bg-slate-100 min-w-[50%] max-h-[80%] rounded shadow-lg hidden">
-      <h1 class="mx-auto text-4xl font-sans my-10 text-rose-800 font-bold tracking-wide">Quiz JS</h1>
-      <div class="question">
-        <h2 class="title"></h2>
+    <div class="quiz flex flex-col bg-slate-100 min-w-[50%] max-h-[80%] rounded shadow-lg p-8">
+      <h1 class="mx-auto text-4xl font-sans mb-10 text-rose-800 font-bold tracking-wide">Quiz JS</h1>
+      <form class="question flex flex-col gap-2">
+        <h2 class="title bg-rose-200 rounded p-3 text-sm">Which of the following is an advantage of using JavaScript?</h2>
+        <div class="flex flex-col gap-1">
+          <div class="flex">
+            <input 
+              type="radio" 
+              class="peer/question1" 
+              value='0'
+              id="question1"
+              />
+             <label for="question1" class="text-sm peer-checked/question1:bg-rose-100 hover:bg-rose-50 p-2 rounded">A - Which of the following is an advantage of using JavaScript?</label> 
+          </div>
+          <div class="flex">
+            <input 
+              type="radio" 
+              class="peer/question2 before:content[''] peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-pink-500 transition-all before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-pink-500 checked:before:bg-pink-500 hover:before:opacity-10" 
+              value='0'
+              id="question2"
+              />
+             <label for="question2" class="text-sm peer-checked/question2:bg-rose-100 hover:bg-rose-50 p-2 rounded">B - Which of the following is an advantage of using JavaScript?</label> 
+          </div>
+
+          
+          </div>
         
-      </div>
+      </form>
     </div>
   </div>
   <script src="./app.js"></script>
